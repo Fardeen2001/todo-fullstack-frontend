@@ -12,7 +12,7 @@ const Login = () => {
   const loginHandler = async (e) => {
     e.preventDefault();
     try {
-      const data = await dispatch(login({ email, password }));
+      const data = dispatch(login({ email, password }));
       if (!!data) {
         toast.success("Logged In successfully", {
           position: "bottom-right",
